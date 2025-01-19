@@ -1,0 +1,46 @@
+<!-- Page Banner -->
+<div
+    class="page-banner-area ptb-100"
+>
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Doctor Details</h2>
+            <ul class="pages-list">
+                <li><a routerLink="/index">Home</a></li>
+                <li>Doctors</li>
+                <li>Doctor Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="doctor-details-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12">
+                <div class="doctor-details-image">
+                    <img src="assets/images/doctor/{{doctorDetails.image_url}}" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="doctor-details-content">
+                    <h3>{{doctorDetails.doctorName}}</h3>
+                    <span class="designation">{{doctorDetails.specialist}}</span>
+                    <button type="button" class="default-btn" routerLink="/appointment/{{doctorDetails.doctorId}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Book Appointment
+                    </button>
+                    <div class="content-overview">
+                        <p><span>Qualification:</span> {{doctorDetails.qualification}}</p>
+                        <p><span>Certification:</span> {{doctorDetails.certification}}</p>
+                        <p><span>Education:</span> {{doctorDetails.education}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="doctor-details-overview-content">
+            <p>{{doctorDetails.description}}</p>
+            
+        </div>
+    </div>
+</div>
